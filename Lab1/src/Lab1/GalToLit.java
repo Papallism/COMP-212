@@ -1,5 +1,5 @@
 package Lab1;
-//This program converts gallons to liters
+// This program converts gallons to liters
 public class GalToLit {
 
 	public static void main(String[] args) {
