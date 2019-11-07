@@ -1,0 +1,41 @@
+
+public class Vehicle {
+	protected int wheels;
+	protected double milesPerGalon;
+	public Vehicle() {
+		wheels = 0;
+		milesPerGalon = 0;
+	}
+	public Vehicle(int wheels, double milesPerGalon) {
+		this.wheels = wheels;
+		this.milesPerGalon = milesPerGalon;
+	}
+	public String toString() {
+		return "\nWheels: " + wheels + "\nMiles per galon: " + milesPerGalon;
+	}
+}
+
+public class Car extends Vehicle {
+	public Car(double milesPerGalon) {
+		wheels = 4;
+		super.milesPerGalon = milesPerGalon;
+	}
+}
+
+public class Motorcycle extends Vehicle {
+	public Motorcycle(double milesPerGalon) {
+		wheels = 2;
+		super.milesPerGalon = milesPerGalon;
+	}
+}
+
+public class UseVehicle {
+
+	public static void main(String[] args) {
+		Vehicle car1 = new Car(10.3);
+		Motorcycle bike1 = new Motorcycle(7.6);
+		System.out.println(car1.toString());
+		System.out.println(bike1.toString());
+	}
+
+}
